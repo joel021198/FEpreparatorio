@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarinpreparcial2.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarinpreparcial2.iOS", "Xamarinpreparcial2\Xamarinpreparcial2.iOS\Xamarinpreparcial2.iOS.csproj", "{4653DD07-34DD-4156-9C93-C37A98EF7D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarinpreparcial2", "Xamarinpreparcial2\Xamarinpreparcial2\Xamarinpreparcial2.csproj", "{29028A4B-B3BE-497B-846B-84856089A060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarinpreparcial2", "Xamarinpreparcial2\Xamarinpreparcial2\Xamarinpreparcial2.csproj", "{29028A4B-B3BE-497B-846B-84856089A060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

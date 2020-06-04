@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Xamarinpreparcial2.ViewModels.ListProductView"
+             Title="ListProducts"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             >
+    <ContentPage.Content>
+
+        <StackLayout Padding="10,30,10,10" Spacing="10"
+                     BindingContext="{Binding Products}">
+            <Label x:Name="titlelabel"
+                Font="30"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="newButton"
+                        Text="Nuevo"
+                        TextColor="White"
+                        BackgroundColor="Navy"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="findButton"
+                        Text="Buscar"
+                        BackgroundColor="Yellow"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <ListView x:Name="productsListView"
+                      BackgroundColor="silver"
+                      HasUnevenRows="true"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                      ItemsSource="{Binding Products}"
+                      SeparatorVisibility="None"
+                      RefreshCommand="{Binding RefreshCommand}"
+                      VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                CornerRadius="20"                                
+                                HasShadow="True"
+                                Margin="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>  
+                                    <StackLayout>
+                                        Grid.Column="1"
+                                        VerticalOptions="Center"
+                                        <Label
+                                            FontSize="Medium"
+                                            Text="{Binding ProductId}"
+                                            TextColor="Black"/>
+                                        <Label>
+                                            
+                                        </Label>
+                                </Grid>                                
+                            </Frame>                            
+                        </ViewCell>                       
+                    </DataTemplate>                    
+                </ListView.ItemTemplate>
+            </ListView>
+                      
+            
+            
+        </StackLayout>
+                     
+    </ContentPage.Content>           
+ 
+</ContentPage>

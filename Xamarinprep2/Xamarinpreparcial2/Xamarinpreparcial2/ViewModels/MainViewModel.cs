@@ -21,9 +21,8 @@ namespace Xamarinpreparcial2.ViewModels
             LoadProducts();
         }
 
-        #region Method
 
-       
+        #region Method       
         private void LoadProducts()
         {
             throw new NotImplementedException();

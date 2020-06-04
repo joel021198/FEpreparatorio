@@ -53,17 +53,24 @@
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>  
-                                    <StackLayout>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout
                                         Grid.Column="1"
-                                        VerticalOptions="Center"
+                                        VerticalOptions="Center">
                                         <Label
                                             FontSize="Medium"
                                             Text="{Binding ProductId}"
                                             TextColor="Black"/>
-                                        <Label>
-                                            
-                                        </Label>
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            Text="{Binding Name}"
+                                            TextColor="Black"/>
+                                        <Label
+                                            FontSize="Medium"
+                                            Text="{Binding Value}"
+                                            TextColor="Black"/>
+                                    </StackLayout>
                                 </Grid>                                
                             </Frame>                            
                         </ViewCell>                       
